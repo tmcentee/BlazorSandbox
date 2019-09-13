@@ -1,0 +1,28 @@
+﻿@page "/reverser"
+
+<h1>Reverser</h1>
+
+<p>Current string: @reversedString</p>
+
+<input type="text" @bind="@input" />
+<button class="btn btn-primary" @onclick="Reverse">Reverse that sucka</button>
+<button class="btn btn-secondary" @onclick="Clear">Clear</button>
+
+
+@code {
+    string reversedString = "";
+    string input = "";
+
+    void Reverse()
+    {
+        char[] charArray = input.ToCharArray();
+        Array.Reverse(charArray);
+
+        reversedString = new string(charArray);
+    }
+
+    void Clear()
+    {
+       input = "";
+    }
+}

@@ -18,6 +18,8 @@ namespace BlazorSandbox
             CreateHostBuilder(args).Build().Run();
         }
 
+        public static int test = 0;
+
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
